@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Wujidadi icon">
+  <defs>
+    <linearGradient id="bg" x1="4" y1="6" x2="60" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#efe2b0"/>
+      <stop offset="0.48" stop-color="#d8bc65"/>
+      <stop offset="1" stop-color="#c79a28"/>
+    </linearGradient>
+    <linearGradient id="jade" x1="17" y1="14" x2="48" y2="51" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9be7d7"/>
+      <stop offset="1" stop-color="#1f8f86"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#6f4a1f" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <path d="M8 12c9 3 15 3 24 0s15-3 24 0M8 52c9-3 15-3 24 0s15 3 24 0" fill="none" stroke="#f5e7ba" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+  <rect x="13" y="13" width="38" height="38" rx="10" fill="#ffffff" fill-opacity="0.12" stroke="#7a531d" stroke-width="2.5" filter="url(#softShadow)"/>
+  <path d="M21 17h-4v9M43 17h4v9M17 38v9h9M47 38v9h-9" fill="none" stroke="#7a531d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="32" r="14" fill="url(#jade)" stroke="#0f3f4a" stroke-width="2"/>
+  <circle cx="32" cy="32" r="5" fill="#f0d887" stroke="#0f3f4a" stroke-width="2"/>
+  <path d="M32 18v7M32 39v7M18 32h7M39 32h7M22 22l5 5M37 37l5 5M42 22l-5 5M27 37l-5 5" fill="none" stroke="#0f3f4a" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="32" cy="18" r="2.4" fill="#dffdf5"/>
+  <circle cx="32" cy="46" r="2.4" fill="#dffdf5"/>
+  <circle cx="18" cy="32" r="2.4" fill="#dffdf5"/>
+  <circle cx="46" cy="32" r="2.4" fill="#dffdf5"/>
+  <path d="M24 32c3-7 13-7 16 0c-3 7-13 7-16 0Z" fill="none" stroke="#f9efd0" stroke-width="2" stroke-linejoin="round" opacity="0.86"/>
+</svg>

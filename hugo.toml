@@ -1,0 +1,12 @@
+baseURL = "https://wujidadi.github.io/"
+locale = "zh-tw"
+defaultContentLanguage = "zh-tw"
+title = "Wujidadi"
+hasCJKLanguage = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false

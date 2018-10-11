@@ -1,0 +1,16 @@
+{{- $title := .Title -}}
+{{- if not $title -}}
+  {{- $matches := findRE `(?m)^#\s+(.+)$` .RawContent 1 -}}
+  {{- if gt (len $matches) 0 -}}
+    {{- $title = replaceRE `(?m)^#\s+` "" (index $matches 0) -}}
+  {{- end -}}
+{{- end -}}
+{{- if $title -}}
+  {{- $title -}}
+{{- else if .IsHome -}}
+  {{- .Site.Title -}}
+{{- else if .File -}}
+  {{- .File.ContentBaseName | humanize -}}
+{{- else -}}
+  {{- .Site.Title -}}
+{{- end -}}
