@@ -1,0 +1,17 @@
+main {
+    margin-top: -0.5em
+}
+ol li {
+    margin-left: -1.25em;
+    line-height: 1.6em
+}
+.filename {
+    color: rgb(0, 60, 255)
+}
+.strem {
+    font-weight: bold;
+    border-bottom: double
+}
+.briefcode {
+    color: orangered
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>樹德基站搶救SOP</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h2>beaconScanner 部分：</h2>
+        <ol>
+            <li>
+                砍掉 <span class="filename">/home/pi/beaconScanner/main</span>（執行檔）。
+            </li>
+            <li>
+                將 <span class="filename">blescan.py</span> 和 <span class="filename">main.py</span> <span class="strem">兩個檔案</span>放到 /home/pi/beaconScanner/ 目錄下。
+            </li>
+        </ol>
+        <h2>sensor 部分：</h2>
+        <ol>
+            <li>
+                砍掉 <span class="filename">/home/pi/sensor/sensor</span>（執行檔）。
+            </li>
+            <li>
+                10.200.60.51 以後：將 <span class="filename">sensor.py</span> 放到 /home/pi/sensor/sensor 目錄下。
+            </li>
+            <li>
+                10.200.60.1～50：將 <span class="filename">sensor-7.py</span> 改名為 <span class="filename">sensor.py</span>，再放到 /home/pi/sensor/sensor 目錄下。
+            </li>
+        </ol>
+        <h2>其他腳本程式：</h2>
+        <ol>
+            <li>
+                將 <span class="filename">autoexec.sh</span>、<span class="filename">autorestart.sh</span>、<span class="filename">check_main.sh</span>、<span class="filename">check_sensor.sh</span> <span class="strem">四個檔案</span>放到 /home/pi/ 目錄下。
+            </li>
+        </ol>
+        <h2>最後將基站重開機：</h2>
+        <ol>
+            <li>
+                在 238 server 命令行輸入 <span class="briefcode">ssh pi@10.200.6X.X</span>（基站 IP），然後輸入密碼 <span class="briefcode">1qaz@WSX</span>，跳出 <span class="filename">pi@raspberrypi: ~$</span> 的提示畫面後再輸入 <span class="briefcode">sudo reboot</span> 將基站重開機。
+            </li>
+        </ol>
+    </main>
+</body>
+</html>
