@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JS獲取外部文件內容測試</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="xianshi"></div>
+    <span>你是豬！</span>
+    <script>
+        // function getData() {
+        //     let request = $.ajax({
+        //         url: 'fetchtest.html',
+        //         method: 'GET',
+        //         async: false,
+        //         cache: false,
+        //         success: function() {
+        //             let text = request.responseText;
+        //             $('#xianshi').text(text);
+        //             console.log(text)
+        //         }
+        //     })
+        // }
+        // getData();
+        setInterval(function() {
+            $('#xianshi').load('fetchtest.html');
+        }, 1000)
+    </script>
+</body>
+</html>
