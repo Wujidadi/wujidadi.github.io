@@ -1,0 +1,142 @@
+body {
+    font-family: 'reserve-monospace', 'Century', 'MingLiU'
+}
+
+main {
+    margin-bottom: 3em
+}
+
+/* 章節標題 */
+.chapter-title {
+    font-family: 'Cumingti';
+    text-align: center
+}
+
+/* 正文區塊 */
+.main {
+    margin: auto
+}
+
+/* 斜體字*/ 
+i {
+    font-family: 'Century Italic'
+}
+
+/* 一般段落 */
+p { 
+    line-height: 1.6em;
+    text-align: justify;
+    text-justify: inter-ideograph
+}
+.paragraph {
+    text-indent: 2em
+}
+
+/* 引文格式段落 */
+.quotation {
+    color: #3e378b;
+    font-family: 'Kaiti'
+}
+
+/* 人說話或書信的引文格式 */
+.words {
+    margin: 2em 2em
+}
+
+/* 特別引文格式（黑體） */
+.special-tip {
+    font-family: 'Heiti'
+}
+
+/* Tooltip 中的引文 */
+.tooltip-quotation {
+    margin: 1em;
+    color: #ffff80
+}
+
+/* 正文中的註解 */
+.notes-in-paragraph {
+    font-family: 'Kaiti';
+    color: #408a3e;
+}
+
+/* 頁面中的註解 */
+.notes-in-page {
+    font-size: 0.5em;
+    font-weight: normal;
+    margin-left: 0.35em;
+    margin-right: 0.35em;
+    color: cornflowerblue;
+    cursor: pointer
+}
+
+/* 版本差異標註 */
+.edition-difference {
+    background: lemonchiffon;
+    color: peru;
+}
+
+/* 頁面最末的尾註、附記或款識 */
+.inscribe-note {
+    font-family: 'Kaiti';
+    font-style: italic;
+    text-align: right;
+    margin-top: 2em;
+    margin-bottom: 2em
+}
+
+/* 超連結 */
+a {
+    text-decoration: none
+}
+
+/* 左右的章節切換器 */
+.page-switcher {
+    position: fixed;
+    font-size: 200px;
+    font-family: Arial;
+    color: lightgrey;
+    cursor: pointer
+}
+
+/* 上一章節 */
+.page-previous {
+    top: calc(50% - 150px);
+    left: calc(50% - 430px - 6rem)
+}
+
+/* 下一章節 */
+.page-next {
+    top: calc(50% - 150px);
+    left: calc(50% + 430px + 2rem)
+}
+
+/* 章節切換器 hover 時變色 */
+.page-switcher:hover {
+    color: grey
+}
+
+/* jQuery UI Tooltip（參考 script.js） */
+.ui-tooltip {
+    background: black;
+    border: 2px solid white
+}
+.ui-tooltip {
+    padding: 6px 12px;
+    color: white;
+    border-radius: 11pt;
+    font: 14px 'reserve-monospace', 'Century', 'MingLiU';
+    box-shadow: 0 0 7px black
+}
+
+/* RWD */
+@media (max-width: 800px) {
+    .main {
+        width: 100%
+    }
+}
+@media (min-width: 801px) {
+    .main {
+        width: 800px
+    }
+}
