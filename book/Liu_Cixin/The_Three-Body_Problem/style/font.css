@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('../../../../fonts/NotoSerifCJKtc-ExtraLight.otf')
+}
+@font-face {
+    font-family: 'Century Italic';
+    src: url('../../../../fonts/Century_Italic.ttf')
+}
+@font-face {
+    font-family: 'Cumingti';
+    src: url('../../../../fonts/KozMinPr6N-Heavy.otf')
+}
+@font-face {
+    font-family: 'Fangsongti';
+    src: url('../../../../fonts/JuzhenFangsong.ttf')
+}
+@font-face {
+    font-family: 'Kaiti';
+    src: url('../../../../fonts/STKaiti.ttf'),
+         local('STKaiti'),
+         local('STKaitiTC-Regular')
+}
+@font-face {
+    font-family: 'Heiti';
+    src: url('../../../../fonts/PingFangSC-Medium.otf');
+}
+@font-face {
+    font-family: 'reserve-monospace';
+    src: local('MingLiU');
+    unicode-range: U+2026, U+2500
+}
