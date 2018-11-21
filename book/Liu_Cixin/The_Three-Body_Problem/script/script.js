@@ -1,5 +1,6 @@
 /* 由 GET 參數取得章節編號 */
-let ch = parseInt(getParameter('ch'));
+let getCh = getParameter('ch');
+let ch = (getCh != null) ? parseInt(getCh) : 0;
 
 /* 取得 GET 參數 */
 function getParameter(param) {
