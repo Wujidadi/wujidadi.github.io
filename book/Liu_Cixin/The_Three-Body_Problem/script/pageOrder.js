@@ -12,7 +12,8 @@ let orders = {
    10: ['text/1-10.jsch', '十', '大史'],
    11: ['text/1-11.jsch', '十一', '三體・墨子・烈焰'],
    12: ['text/1-12.jsch', '十二', '紅岸之二'],
-   13: ['text/1-13.jsch', '十三', '紅岸之三']
+   13: ['text/1-13.jsch', '十三', '紅岸之三'],
+   14: ['text/1-14.jsch', '十四', '紅岸之四']
 }
 
 function getJsonLength(j) {
