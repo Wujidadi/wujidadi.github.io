@@ -15,14 +15,14 @@
   </defs>
   <rect width="64" height="64" rx="16" fill="url(#bg)"/>
   <path d="M8 12c9 3 15 3 24 0s15-3 24 0M8 52c9-3 15-3 24 0s15 3 24 0" fill="none" stroke="#f5e7ba" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
-  <rect x="13" y="13" width="38" height="38" rx="10" fill="#ffffff" fill-opacity="0.12" stroke="#7a531d" stroke-width="2.5" filter="url(#softShadow)"/>
-  <path d="M21 17h-4v9M43 17h4v9M17 38v9h9M47 38v9h-9" fill="none" stroke="#7a531d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="32" cy="32" r="14" fill="url(#jade)" stroke="#0f3f4a" stroke-width="2"/>
-  <circle cx="32" cy="32" r="5" fill="#f0d887" stroke="#0f3f4a" stroke-width="2"/>
-  <path d="M32 18v7M32 39v7M18 32h7M39 32h7M22 22l5 5M37 37l5 5M42 22l-5 5M27 37l-5 5" fill="none" stroke="#0f3f4a" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="32" cy="18" r="2.4" fill="#dffdf5"/>
-  <circle cx="32" cy="46" r="2.4" fill="#dffdf5"/>
-  <circle cx="18" cy="32" r="2.4" fill="#dffdf5"/>
-  <circle cx="46" cy="32" r="2.4" fill="#dffdf5"/>
-  <path d="M24 32c3-7 13-7 16 0c-3 7-13 7-16 0Z" fill="none" stroke="#f9efd0" stroke-width="2" stroke-linejoin="round" opacity="0.86"/>
+  <rect x="7" y="7" width="50" height="50" rx="12" fill="#ffffff" fill-opacity="0.12" stroke="#7a531d" stroke-width="2.5" filter="url(#softShadow)"/>
+  <path d="M18 12h-6v13M46 12h6v13M12 39v13h13M52 39v13h-13" fill="none" stroke="#7a531d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="32" r="18" fill="url(#jade)" stroke="#0f3f4a" stroke-width="2"/>
+  <circle cx="32" cy="32" r="6.5" fill="#f0d887" stroke="#0f3f4a" stroke-width="2"/>
+  <path d="M32 13v10M32 41v10M13 32h10M41 32h10M19 19l7 7M38 38l7 7M45 19l-7 7M26 38l-7 7" fill="none" stroke="#0f3f4a" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="32" cy="13" r="2.6" fill="#dffdf5"/>
+  <circle cx="32" cy="51" r="2.6" fill="#dffdf5"/>
+  <circle cx="13" cy="32" r="2.6" fill="#dffdf5"/>
+  <circle cx="51" cy="32" r="2.6" fill="#dffdf5"/>
+  <path d="M22 32c4-9 16-9 20 0c-4 9-16 9-20 0Z" fill="none" stroke="#f9efd0" stroke-width="2" stroke-linejoin="round" opacity="0.86"/>
 </svg>

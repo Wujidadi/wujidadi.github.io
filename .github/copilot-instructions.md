@@ -13,9 +13,9 @@ This repository is the source for the `wujidadi.github.io` GitHub Pages site. It
 Hugo rendering is intentionally minimal and theme-less:
 
 - `content/_index.md` is the homepage content.
-- `layouts/index.html` renders the homepage content inside the shared page shell.
+- `layouts/index.html` renders the homepage as a standalone centered landing page, not as a document-style page.
 - `layouts/_default/list.html` and `layouts/_default/single.html` handle future section and page content.
-- `layouts/_default/baseof.html` owns the HTML document, favicon links, footer, and all site CSS.
+- `layouts/_default/baseof.html` owns the HTML document, favicon links, non-home footer, and all site CSS.
 - `layouts/partials/page-title-text.html` derives page titles from front matter when present, otherwise from the first Markdown `#` heading, then falls back to the file name or site title.
 - `static/` contains assets copied directly to the site root, including `favicon.svg` and `favicon.png`.
 

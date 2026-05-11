@@ -1,1 +1,5 @@
-# Welcome to Wujidadi's site!
+---
+title: Home
+---
+
+Portal to Wujidadi

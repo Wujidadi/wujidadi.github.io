@@ -17,8 +17,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 渲染管線（理解整體版面必須同時看這幾個檔案）：
 
 - `content/_index.md`：首頁的 Markdown 內容。新增其他頁面時，將 Markdown 放在 `content/` 之下。
-- `layouts/_default/baseof.html`：HTML 骨幹、`<head>`、favicon 連結、頁尾與**站台所有 CSS**都集中在這裡。新增樣式時請改這個檔案，除非要引入完整 asset pipeline。
-- `layouts/index.html`：首頁用的 `main` block。
+- `layouts/_default/baseof.html`：HTML 骨幹、`<head>`、favicon 連結、非首頁頁尾與**站台所有 CSS**都集中在這裡。對 `.IsHome` 做切換：`<body>` 會加上 `home-body` class，`<main>` 在 `site-home`（首頁，全屏置中 landing page）與 `markdown-body`（一般頁面，文件式版面）之間擇一；`site-footer` 僅於非首頁渲染。新增樣式時請改這個檔案，除非要引入完整 asset pipeline。
+- `layouts/index.html`：首頁用的 `main` block，輸出 `home-entry` 容器，將 `content/_index.md` 渲染為獨立的置中 landing page，不套用一般文件式 `page-layout` / `page-content` 卡片。
 - `layouts/_default/single.html` / `list.html`：分別處理單頁與 section 列表；`list.html` 在非首頁時會自動輸出 `<h1>` 標題，並在 `.Pages` 非空且 front matter `showList` 非 `false` 時列出子頁面。
 - `layouts/partials/page-title-text.html`：標題解析順序為「front matter `title` → Markdown 第一個 `#` 標題 → 檔名 humanize → 站台標題」。新增頁面通常不需要 front matter，直接寫 `# 標題` 即可被偵測。
 - `static/`：直接複製到網站根目錄的靜態檔；目前包含 `favicon.svg` 與 `favicon.png`。

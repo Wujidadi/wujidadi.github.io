@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="{{ "favicon.png" | relURL }}">
   <meta name="theme-color" content="#d2aa38">
   {{- $pageTitle := partial "page-title-text.html" . -}}
-  <title>{{ if ne $pageTitle .Site.Title }}{{ $pageTitle }} | {{ end }}{{ .Site.Title }}</title>
+  <title>{{ if .IsHome }}{{ $pageTitle }}{{ else if ne $pageTitle .Site.Title }}{{ $pageTitle }} | {{ end }}{{ if not .IsHome }}{{ .Site.Title }}{{ end }}</title>
   <style>
     :root {
       color-scheme: dark;
@@ -26,6 +26,13 @@
       color: #c9d1d9;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       line-height: 1.65;
+    }
+    body.home-body {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(90, 240, 210, 0.16), rgba(3, 7, 13, 0) 30%),
+        radial-gradient(ellipse at 50% 58%, rgba(60, 120, 255, 0.13), rgba(3, 7, 13, 0) 42%),
+        #03070d;
     }
     .markdown-body {
       max-width: 980px;
@@ -125,6 +132,57 @@
       font-size: 0.875rem;
       text-align: center;
     }
+    .site-home {
+      position: relative;
+      display: grid;
+      min-height: 100vh;
+      place-items: center;
+      overflow: hidden;
+      padding: 24px;
+      isolation: isolate;
+    }
+    .site-home::before,
+    .site-home::after {
+      position: fixed;
+      inset: -20%;
+      z-index: -1;
+      content: "";
+      pointer-events: none;
+    }
+    .site-home::before {
+      background-image:
+        repeating-linear-gradient(90deg, rgba(92, 255, 205, 0.08) 0 1px, transparent 1px 56px),
+        repeating-linear-gradient(0deg, rgba(92, 255, 205, 0.05) 0 1px, transparent 1px 56px),
+        linear-gradient(115deg, transparent 0 42%, rgba(0, 255, 170, 0.16) 45%, transparent 49% 100%);
+      opacity: 0.78;
+      transform: perspective(720px) rotateX(58deg) translateY(10%);
+      transform-origin: center bottom;
+    }
+    .site-home::after {
+      background:
+        radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.45) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 78% 28%, rgba(255, 255, 255, 0.35) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 67% 72%, rgba(255, 255, 255, 0.3) 0 1px, transparent 1.5px),
+        radial-gradient(ellipse at 50% 50%, transparent 0 35%, rgba(94, 234, 212, 0.16) 36%, transparent 42%),
+        radial-gradient(ellipse at 50% 52%, rgba(3, 7, 13, 0) 0 32%, rgba(0, 0, 0, 0.52) 66%);
+      background-size: 220px 220px, 280px 280px, 180px 180px, 100% 100%, 100% 100%;
+      opacity: 0.82;
+    }
+    .home-entry {
+      color: #eafff8;
+      font-size: clamp(1.25rem, 3vw, 2.35rem);
+      font-weight: 650;
+      letter-spacing: 0.14em;
+      line-height: 1.3;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow:
+        0 0 12px rgba(94, 234, 212, 0.5),
+        0 0 34px rgba(59, 130, 246, 0.38);
+    }
+    .home-entry p {
+      margin: 0;
+    }
     @media (max-width: 767px) {
       .markdown-body {
         padding: 20px 16px 32px;
@@ -132,15 +190,20 @@
       .page-content {
         padding: 20px 16px 24px;
       }
+      .home-entry {
+        letter-spacing: 0.08em;
+      }
     }
   </style>
 </head>
-<body>
-  <main class="markdown-body">
+<body{{ if .IsHome }} class="home-body"{{ end }}>
+  <main class="{{ if .IsHome }}site-home{{ else }}markdown-body{{ end }}">
     {{ block "main" . }}{{ end }}
   </main>
-  <footer class="site-footer">
-    &copy; {{ now.Year }} Wujidadi.
-  </footer>
+  {{ if not .IsHome }}
+    <footer class="site-footer">
+      &copy; {{ now.Year }} CCK, Wujidadi (Taras Alatmiuë).
+    </footer>
+  {{ end }}
 </body>
 </html>
