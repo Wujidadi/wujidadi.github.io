@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="{{ "favicon.png" | relURL }}">
   <meta name="theme-color" content="#d2aa38">
   {{- $pageTitle := partial "page-title-text.html" . -}}
-  <title>{{ if .IsHome }}{{ $pageTitle }}{{ else if ne $pageTitle .Site.Title }}{{ $pageTitle }} | {{ end }}{{ if not .IsHome }}{{ .Site.Title }}{{ end }}</title>
+  <title>{{ if ne $pageTitle .Site.Title }}{{ $pageTitle }} | {{ end }}{{ .Site.Title }}</title>
   <style>
     :root {
       color-scheme: dark;
